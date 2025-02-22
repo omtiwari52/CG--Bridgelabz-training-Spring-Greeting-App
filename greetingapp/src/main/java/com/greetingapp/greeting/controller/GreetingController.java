@@ -14,18 +14,17 @@ public class GreetingController {
         return new Greeting("Hello from BridgeLabz!!");
     }
 
-    @PostMapping("/custom")
+    @PostMapping("/custom")  //create a greeting message
     public Greeting postGreeting(@RequestBody Greeting greeting){
         return new Greeting("Hello " + greeting.getMessage() + " from BridgeLabz!!");
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update")  //update a greeting message
     public Greeting updateGreeting(@RequestBody Greeting greeting){
         return new Greeting("Message updated: "+greeting.getMessage());
     }
 
-
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete") //delete a greeting message
     public Greeting deleteGreeting(){
         return new Greeting("Message deleted successfully");
     }
