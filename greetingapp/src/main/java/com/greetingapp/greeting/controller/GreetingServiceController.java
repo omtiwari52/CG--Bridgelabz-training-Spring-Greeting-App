@@ -47,4 +47,10 @@ public class GreetingServiceController {
     public Optional<GreetingEntity> getGreetingById(@PathVariable Long id) {
         return greetingService.getGreetingById(id);
     }
+
+    // Get All Greeting Messages
+    @GetMapping("/all")
+    public List<GreetingEntity> getAllGreetings() {
+        return greetingService.getAllGreetings();
+    }
 }
