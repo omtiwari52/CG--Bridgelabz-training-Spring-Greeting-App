@@ -39,4 +39,9 @@ public class GreetingService {
         GreetingEntity greeting = new GreetingEntity(message);
         return greetingRepository.save(greeting);
     }
+
+    // Get Greeting Message by ID
+    public Optional<GreetingEntity> getGreetingById(Long id) {
+        return greetingRepository.findById(id);
+    }
 }
